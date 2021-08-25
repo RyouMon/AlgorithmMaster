@@ -2,18 +2,22 @@ from typing import List
 
 
 class Solution01:
-    """暴力破解法"""
-    def removeElement(self, nums: List[int], val: int) -> int:
+    """暴力破解法
+    时间复杂度：O(n^2)
+    空间复杂度：O(1)
+    """
+
+    @classmethod
+    def removeElement(cls, nums: List[int], val: int) -> int:
         length = len(nums)
         index = 0
 
-        while (index < length):
+        while index < length:
 
             if nums[index] == val:
 
-                for j in range(index+1, length):
-
-                    nums[j-1] = nums[j]
+                for j in range(index + 1, length):
+                    nums[j - 1] = nums[j]
 
                 length -= 1
                 index -= 1  # 因为数组整体向左移动了一个元素，所以索引也要同时移动
@@ -29,7 +33,8 @@ class Solution02:
     空间复杂度：O(1)
     """
 
-    def removeElement(self, nums: List[int], val: int) -> int:
+    @classmethod
+    def removeElement(cls, nums: List[int], val: int) -> int:
         fast = slow = 0
 
         while fast < len(nums):
@@ -43,3 +48,11 @@ class Solution02:
             fast += 1
 
         return slow
+
+
+if __name__ == '__main__':
+    assert Solution01.removeElement([3, 2, 2, 3], 3) == 2
+    assert Solution01.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2) == 5
+
+    assert Solution02.removeElement([3, 2, 2, 3], 3) == 2
+    assert Solution02.removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2) == 5
