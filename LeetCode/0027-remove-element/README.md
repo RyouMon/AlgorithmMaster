@@ -1,5 +1,9 @@
 # 27 移除元素
 
+题目链接：[https://leetcode-cn.com/problems/remove-element/](https://leetcode-cn.com/problems/remove-element/)
+
+参考：[代码随想录 (programmercarl.com)](https://programmercarl.com/0027.移除元素.html)
+
 ## 暴力破解法
 
 使用嵌套循环，外层循环遍历数组，内层循环进行元素交换。
