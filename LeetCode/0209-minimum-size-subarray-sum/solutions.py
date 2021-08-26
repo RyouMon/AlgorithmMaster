@@ -39,7 +39,7 @@ class Solution02:
 
             # 当窗口内元素总和大于 target, 窗口向前移动
             while sum_ >= target:
-                result = min(result, start - end + 1)
+                result = min(result, end - start + 1)
                 sum_ -= nums[start]
                 start += 1
 
