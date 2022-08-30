@@ -1,6 +1,6 @@
 /**
  * 242. 有效的字母异位词 字典解法
- * 时间复杂度O(mn) 空间复杂度O(1)
+ * 时间复杂度O(m+n) 空间复杂度O(1)
  */
 class Solution {
     public boolean isAnagram(String s, String t) {
