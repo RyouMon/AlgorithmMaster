@@ -1,6 +1,10 @@
-class Solution {
+/**
+ * 144. 二叉树的前序遍历
+ * 递归法
+ */
+class Solution01 {
     public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList();
+        List<Integer> result = new ArrayList<>();
         this.traversal(root, result);
         return result;
     }

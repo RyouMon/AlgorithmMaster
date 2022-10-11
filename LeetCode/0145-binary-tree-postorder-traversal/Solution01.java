@@ -1,6 +1,9 @@
-class Solution {
+/**
+ * 145. 二叉树的后序遍历 递归写法
+ */
+class Solution01 {
     public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList();
+        List<Integer> result = new ArrayList<>();
         this.traversal(root, result);
         return result;
     }
