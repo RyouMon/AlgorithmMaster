@@ -29,8 +29,8 @@ class Solution {
         int[] rightInorder = Arrays.copyOfRange(inorder, delimiterIndex + 1, inorder.length);
 
         // 切割后序数组
-        int[] leftPostorder = Arrays.copyOfRange(postorder, 0, leftInorder.length);
-        int[] rightPostorder = Arrays.copyOfRange(postorder, leftInorder.length, postorder.length - 1);
+        int[] leftPostorder = Arrays.copyOfRange(postorder, 0, delimiterIndex);
+        int[] rightPostorder = Arrays.copyOfRange(postorder, delimiterIndex, postorder.length - 1);
 
         root.left = buildTree(leftInorder, leftPostorder);
         root.right = buildTree(rightInorder, rightPostorder);
